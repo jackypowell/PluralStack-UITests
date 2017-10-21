@@ -131,7 +131,6 @@ public class PluralStackUITests {
     }
 
     private int GetHTTPResponseStatusCode(String url) throws IOException {
-        HttpURLConnection http = (HttpURLConnection) new URL(url).openConnection();
-        return http.getResponseCode();
+        return ((HttpURLConnection) new URL(url).openConnection()).getResponseCode();
     }
 }
